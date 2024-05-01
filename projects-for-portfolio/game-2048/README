@@ -1,0 +1,60 @@
+# 2048 Game
+
+Welcome to the 2048 game! A single-player sliding tile puzzle game, which was originally written by Italian web developer Gabriele Cirulli. The objective of the game is to slide numbered tiles on a grid to combine them and create a tile with the number 2048.
+
+## How to Play
+
+You can play the game using your keyboard arrow keys:
+- **UP**: to move the tiles up.
+- **DOWN**: to move the tiles down.
+- **LEFT**: to move the tiles left.
+- **RIGHT**: to move the tiles right.
+
+When two tiles with the same number touch, they merge into one! Your goal is to create a tile with the number 2048.
+
+## Game Features
+
+- **Smooth Gameplay**: Enjoy seamless gameplay with no interruptions.
+- **High Score Tracking**: Keeps track of your personal best scores.
+- **Undo Move**: Made a mistake? Use the undo feature to correct your last move.
+
+## Installation
+
+You can play the game online, or you can clone it from the repository to run it locally on your machine. Here are the steps to run it locally:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-repository/2048.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd 2048
+   ```
+3. Open the `index.html` file in your browser.
+
+Enjoy playing the game and try to reach 2048!
+
+## Accessibility
+
+We are committed to making the 2048 game accessible to as many people as possible. Here are some of the accessibility features we've implemented:
+
+- **Keyboard Navigability**: The game can be fully operated using the keyboard, making it accessible for users with limited mobility.
+- **Screen Reader Support**: All interactive elements are labeled for screen reader users.
+- **Color Contrast**: We have ensured that the color contrast ratios meet the WCAG AA standards for readability.
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
+
+## License
+
+2048 is open source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Files Included
+
+- **index.html**: The main HTML file to open the game in your browser.
+- **style.css**: Contains all the styling required for the game.
+- **script.js**: Contains the JavaScript logic to handle the game mechanics.
+- **README.md**: This file, which provides information about the game and how to play it.
+
+

@@ -1,0 +1,103 @@
+<!--
+index.html
+
+This file serves as the main entry point for the 2048 game. It includes the HTML structure of the game interface,
+linking to external CSS for styling and JavaScript files for functionality. The file defines the layout of the game,
+including the game board, control buttons, score displays, and instructions for playing the game. It also handles
+the initial loading of the game components and sets up the basic interactive elements.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking the external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to 2048!</h1> <!-- Main heading for the game -->
+        <p>Join the numbers and get to the 2048 tile!</p>
+    </header>
+    <section id="game-container">
+        <!-- Game board where the 2048 game tiles will appear -->
+        <div id="board"></div>
+    </section>
+    <aside>
+        <!-- Detailed instructions for the user on how to play the game -->
+        <h2>How to Play:</h2>
+        <p>Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they merge into one!</p>
+        <p>Your goal is to combine the tiles until you reach <strong>2048!</strong></p>
+    </aside>
+    <footer>
+        <button id="new-game-button">New Game</button> <!-- Button to start a new game -->
+        <button id="play-button">Play</button> <!-- Button to start or restart the game -->
+        <p>Press 'New Game' to reset or 'Play' to start over if you lose.</p>
+    </footer>
+    <script src="script.js"></script> <!-- Linking the external JavaScript file that contains game logic -->
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to simulate button click
+        function triggerButtonClick(buttonId) {
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.click();
+            }
+        }
+
+        // Event listener for keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            switch (event.key) {
+                case 'n': // Press 'n' for New Game
+                    triggerButtonClick('new-game-button');
+                    break;
+                case 'p': // Press 'p' for Play
+                    triggerButtonClick('play-button');
+                    break;
+            }
+        });
+    });
+</script>
+<style>
+    /* Ensuring the game scales well on different screen sizes */
+    @media (max-width: 768px) {
+        #game-container {
+            max-width: 300px; /* Smaller width for tablets and large phones */
+        }
+        .tile {
+            min-height: 50px; /* Smaller tiles for smaller screens */
+            font-size: 1.8rem; /* Smaller font size for readability on smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        #game-container {
+            max-width: 200px; /* Smaller width for small phones */
+        }
+        .tile {
+            min-height: 40px; /* Even smaller tiles for very small screens */
+            font-size: 1.2rem; /* Reduced font size for very small screens */
+        }
+    }
+</style>
+
+<div id="control-buttons">
+    <button id="up-button">Up</button>
+    <button id="down-button">Down</button>
+    <button id="left-button">Left</button>
+    <button id="right-button">Right</button>
+</div>
+
+<script src="script.js"></script>
+
+
+<div id="score-container">
+    Current Score: <span id="score">0</span>
+</div>
+<div id="best-score-container">
+    Best Score: <span id="best-score">0</span>
+</div>
+
